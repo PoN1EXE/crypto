@@ -5,9 +5,12 @@ const BtnBalance = () => {
   const [balance, setBalance] = useState(5000)
 
   return (
-    <button className='btnBalance' onClick={() => setBalance(balance + 1000)}>
-      ${balance}
-    </button>
+    <div>
+      <button className='btnBalance' onClick={() => setBalance(balance + 1000)}>
+        Деньге!!!
+      </button>
+      <p>${balance}</p>
+    </div>
   )
 }
 
