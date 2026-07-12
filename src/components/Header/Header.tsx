@@ -1,8 +1,8 @@
-import './styles.scss'
+import styles from './Header.module.scss'
 
-const name = 'CRYPTO'
+const APP_NAME = 'CRYPTO'
 const Header = () => {
-  return <header className='header'>{name}</header>
+  return <header className={styles.header}>{APP_NAME}</header>
 }
 
 export { Header }

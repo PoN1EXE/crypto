@@ -1,9 +1,9 @@
-import './styles.scss'
 import { Card } from '../../components/Card/Card'
+import styles from './Main.module.scss'
 
 const Main = () => {
   return (
-    <main className='main'>
+    <main className={styles.main}>
       <Card />
     </main>
   )

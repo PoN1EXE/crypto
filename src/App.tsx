@@ -1,11 +1,10 @@
 import { Header } from './components/Header/Header'
 import { Main } from './pages/Main/Main'
-
-import './index.css'
+import styles from './App.module.scss'
 
 function App() {
   return (
-    <div className='app'>
+    <div className={styles.app}>
       <Header />
       <Main />
     </div>
