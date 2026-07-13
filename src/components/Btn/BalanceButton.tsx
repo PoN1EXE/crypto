@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styles from './BalanceButton.module.scss'
 
 export const BalanceButton = () => {
-  const [balance, setBalance] = useState(5000)
+  const [balance, setBalance] = useState<number>(5000)
 
   return (
     <div>
