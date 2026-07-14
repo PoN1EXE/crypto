@@ -1,9 +1,7 @@
 import { BalanceButton } from '../Btn/BalanceButton'
 import styles from './Card.module.scss'
 
-interface CardProps {}
-
-const Card = ({}: CardProps): jsx.Element => {
+export const Card = () => {
   return (
     <div className={styles.card}>
       <p>Crypto-Finance</p>
@@ -15,4 +13,4 @@ const Card = ({}: CardProps): jsx.Element => {
   )
 }
 
-export { Card }
+

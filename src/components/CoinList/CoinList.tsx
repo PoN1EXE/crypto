@@ -1,20 +1,22 @@
-import React from 'react'
 import { useCrypto } from '../../hooks/useCrypto'
 import styles from './CoinList.module.scss'
 
-interface CoinListProps {}
+export const CoinList = () => {
+  const { data: coins, isLoading, isError, error } = useCrypto()
 
-const CoinList = ({}: CoinListProps) => {
-  const { data, isLoading, error } = useCrypto()
+  if (isLoading) {
+    return <div className={styles.loading}>Загрузка...</div>
+  }
 
-  if (isLoading) return <div className={styles.loading}>Загрузка...</div>
-  if (error) return <div className={styles.error}>Ошибка: {error.message}</div>
+  if (isError) {
+    return <div className={styles.error}>Ошибка: {error.message}</div>
+  }
 
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Криптовалюты</h2>
       <ul className={styles.list}>
-        {data?.map((coin) => (
+        {coins?.map((coin) => (
           <li key={coin.id} className={styles.item}>
             <div className={styles.left}>
               <span className={styles.icon}>{coin.icon}</span>
@@ -35,5 +37,3 @@ const CoinList = ({}: CoinListProps) => {
     </div>
   )
 }
-
-export { CoinList }
