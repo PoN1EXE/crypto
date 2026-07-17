@@ -19,7 +19,13 @@ export const CoinList = () => {
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Криптовалюты</h2>
-      <input type='text' value={search} onChange={(e) => setSearch(e.target.value)} placeholder='Поиск...' />
+      <input
+        className={styles.input}
+        type='text'
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        placeholder='Поиск...'
+      />
       {filteredData?.length === 0 ? (
         <div>'Ничего не найдено...'</div>
       ) : (
